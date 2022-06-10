@@ -1,11 +1,17 @@
 import React from "react";
 
-function ListItem({text}){
-    return(
-        <li>
-            {text}
-        </li>
-    )
+function ListItem(props){
+    const listArray = props.list
+    return (
+    <ul>
+    {listArray.map((text) =>{
+        return (
+            <>
+            <li >{text}</li>
+            </>
+        )
+    })
+    }
+    </ul>) // hands in the prop given from app.js
 }
-
-export default ListItem ;
+export default ListItem;

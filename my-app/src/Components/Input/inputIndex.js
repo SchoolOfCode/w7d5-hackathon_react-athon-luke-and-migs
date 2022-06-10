@@ -1,30 +1,19 @@
 import React from "react";
 
-const handleClick = () => {
-    console.log("Hello")
-    // let newListItem =
-}
-
-function Input({text, setText}){
-
+// // const handleClick = () => {
+//     console.log("Hello")
+//     // let newListItem =
+// }
+function Input({handleState}){
     //add set state thats updated from onchange 
 
-    return(
-    <>
-        <input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}>
-
-        </input>
+    return <input onChange={handleState} type="text"></input>
+     // hands in the function prop given in App.js
+    //onChange is to call the function when something is inputted
+}
         
 
-        <button onClick={handleClick}>
-            Click me
-        </button>
-    </>
-    )
-}
+
 
 
 
