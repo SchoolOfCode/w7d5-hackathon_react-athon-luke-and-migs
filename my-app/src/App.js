@@ -8,7 +8,11 @@ import Input from "./Components/Input/inputIndex"
 
 
 function App() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState([]);
+  //text is the do to list array
+  //make a function in here that updates the todolist with a new item
+  //pass this down to the input as a prop, this call the function to add
+  //to the items list with the useState array
   return (
     <div className="App">
       <Header />

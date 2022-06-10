@@ -1,13 +1,16 @@
 import React from "react";
 
 const handleClick = () => {
-    console.log()
+    console.log("Hello")
     // let newListItem =
 }
 
 function Input({text, setText}){
+
+    //add set state thats updated from onchange 
+
     return(
-    <div className="input">
+    <>
         <input
         type="text"
         value={text}
@@ -19,7 +22,7 @@ function Input({text, setText}){
         <button onClick={handleClick}>
             Click me
         </button>
-    </div>
+    </>
     )
 }
 
