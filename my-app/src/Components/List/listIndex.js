@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function ListItem(props){
     const listArray = props.list
     return (
@@ -13,5 +14,6 @@ function ListItem(props){
     })
     }
     </ul>) // hands in the prop given from app.js
+
 }
 export default ListItem;

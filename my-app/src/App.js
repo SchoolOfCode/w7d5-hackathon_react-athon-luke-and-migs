@@ -20,6 +20,7 @@ function App() {
     setList([...list, text]);
     console.log(list)
   }
+
   //text is the do to list array
   //make a function in here that updates the todolist with a new item
   //pass this down to the input as a prop, this call the function to add
