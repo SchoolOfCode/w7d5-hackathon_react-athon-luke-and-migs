@@ -9,6 +9,7 @@ import Input from "./Components/Input/inputIndex"
 
 function App() {
   const [text, setText] = useState([]);
+  const test = ["test1", "test2", "test3"];
   //text is the do to list array
   //make a function in here that updates the todolist with a new item
   //pass this down to the input as a prop, this call the function to add
@@ -18,7 +19,7 @@ function App() {
       <Header />
       <>
       <Input text={text} setText={setText}></Input>
-      <ListItem text={text}/>
+      <ListItem text={test}/>
       </>
     </div>
   );
