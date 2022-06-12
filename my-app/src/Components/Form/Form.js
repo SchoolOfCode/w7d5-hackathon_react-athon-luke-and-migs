@@ -1,12 +1,11 @@
 import React from "react";
 import TodoList from "../TodoList/TodoList";
 
-function Form ({ inputText, setInputText, todos, setTodos }) {
+function Form ({ inputText, setInputText, todos, setTodos, setStatus }) {
 // Here we can write our JS code and functions to handle inputText
 // (e) = event being passed as argument
 function inputTextHandler(e) {
-  //console log the event which tells us info about what has just happened on the input.
-  console.log(e.target.value);
+  //the event which tells us info about what has just happened on the input.
   //update our state to update the rest of our code when needed.
   setInputText(e.target.value);
 };
@@ -19,6 +18,9 @@ function submitTodoHandler(e) {
   // RESET INPUT TEXT ON BROWSER TO EMPTY. SETS THE setInputText State back to zero/empty on display.
   setInputText("");
 };
+function statusHandler(e) {
+ setStatus(e.target.value);
+};
 
 // ADD (e) = event to input or button with onChange/onClick atrributes inside Element as below.
 // We are adding inputTextHandler function. Everytime our input changes inputTextHandler is being run.
@@ -30,7 +32,7 @@ function submitTodoHandler(e) {
           <i className="fas fa-plus-square"></i>
         </button>
         <div className="select">
-          <select name="todos" className="filter-todo">
+          <select onChange={statusHandler} name="todos" className="filter-todo">
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
